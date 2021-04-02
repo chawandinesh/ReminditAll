@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 export default function AppRoutes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerTintColor:'#000'}}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="RemaindersList" component={RemaindersList} />
         <Stack.Screen name="AddReminderScreen" component={AddReminderScreen} />

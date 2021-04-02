@@ -115,9 +115,10 @@ export default function AddRemainderScreen(props) {
   };
 
   return (
-    <View
+    <ImageBackground
+      source={require('../assets/bgr1.jpeg')}
       style={{
-        backgroundColor: loading ? 'rgba(230, 92, 83, 0.5)' : '#e65c53',
+      //  backgroundColor: loading ? 'rgba(230, 92, 83, 0.5)' : '#e65c53',
         flex: 1,
       }}>
       {loading ? (
@@ -157,6 +158,7 @@ export default function AddRemainderScreen(props) {
             />
           </View>
         </View>
+        <View></View>
         <View
           style={{
             width: width,
@@ -189,6 +191,7 @@ export default function AddRemainderScreen(props) {
                 paddingHorizontal: 10,
                 borderWidth: 1,
                 borderColor: '#fff',
+                backgroundColor:'#000'
               }}>
               <Text style={{color: '#fff', fontWeight: 'bold'}}>
                 Name
@@ -229,6 +232,7 @@ export default function AddRemainderScreen(props) {
                 paddingHorizontal: 10,
                 borderWidth: 1,
                 borderColor: '#fff',
+                backgroundColor:'#000'
               }}>
               <Text style={{color: '#fff', fontWeight: 'bold'}}>
                 quantity per time
@@ -269,6 +273,7 @@ export default function AddRemainderScreen(props) {
                 paddingHorizontal: 10,
                 borderWidth: 1,
                 borderColor: '#fff',
+                backgroundColor:"#000"
               }}>
               <Text style={{color: '#fff', fontWeight: 'bold'}}>
                 quantity per day
@@ -310,6 +315,7 @@ export default function AddRemainderScreen(props) {
               width: width * 0.23,
               alignItems: 'center',
               justifyContent: 'center',
+              backgroundColor:'#000'
             }}>
             <Icon
               name="calendar"
@@ -348,6 +354,7 @@ export default function AddRemainderScreen(props) {
                 alignItems: 'center',
                 width: width * 0.2,
                 paddingHorizontal: 10,
+                backgroundColor:'#000',
                 borderWidth: 1,
                 borderColor: '#fff',
               }}>
@@ -356,6 +363,8 @@ export default function AddRemainderScreen(props) {
           </View>
           <View style={{width: width * 0.05, backgroundColor: '#000'}}></View>
         </View>
+        <View></View>
+        <View></View>
         <View
           style={{
             width: width,
@@ -385,6 +394,7 @@ export default function AddRemainderScreen(props) {
             </Text>
           </TouchableOpacity>
         </View>
+        <View></View>
         <DateTimePickerModal
           isVisible={isDatePickerVisible}
           mode="date"
@@ -392,6 +402,6 @@ export default function AddRemainderScreen(props) {
           onCancel={hideDatePicker}
         />
       </KeyboardAwareScrollView>
-    </View>
+    </ImageBackground>
   );
 }

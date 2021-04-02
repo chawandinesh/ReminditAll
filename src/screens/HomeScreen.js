@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import moment from 'moment';
 import {View, Text, Dimensions} from 'react-native';
-import PushNotification from 'react-native-push-notification';
+//import PushNotification from 'react-native-push-notification';
 import {MediMaintaaContext} from '../context/context';
 import {useIsFocused} from '@react-navigation/native';
 import {Image} from 'react-native';
@@ -46,21 +46,24 @@ export default function HomeScreen(props) {
   //   requestPermissions: true,
   // });
 
-  const getInitialData = async () => {};
-  PushNotification.localNotification({
-    id: 4,
-  });
+  {/**
+    const getInitialData = async () => {};
+    PushNotification.localNotification({
+      id: 4,
+    });
+    React.useEffect(() => {
+      getInitialData();
+    }, [props.navigation, isFocused]);
+   */}
 
-  React.useEffect(() => {
-    getInitialData();
-  }, [props.navigation, isFocused]);
+
 
   if (props.route.name === 'HomeScreen') {
     state.map((e, idx) => {
       // console.log(e.endDate, e, moment().format('YYYY-MM-DD'));
       if (e.endDate === moment().format('YYYY-MM-DD')) {
         Vibration.vibrate(100);
-        Alert.alert('Remainder', `${e.nameOfPill} was reached ${e.endDate}`, [
+        Alert.alert('Reminder', `${e.nameOfPill} was reached ${e.endDate}`, [
           {
             text: 'Update',
             onPress: () =>
@@ -116,7 +119,7 @@ export default function HomeScreen(props) {
 
   return (
     <ImageBackground
-      source={require('../assets/bgr1.jpg')}
+      source={require('../assets/bgr1.jpeg')}
       style={{height, width}}>
       <View
         style={{

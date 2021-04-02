@@ -173,7 +173,7 @@ export default function HomeScreen(props) {
   return (
     <ImageBackground
       style={{height, width}}
-      source={require('../assets/bg3.jpg')}>
+      source={require('../assets/bgr2.png')}>
       <View
         style={{
           height: height,
